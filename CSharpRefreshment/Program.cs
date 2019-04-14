@@ -8,38 +8,26 @@ namespace CSharpRefreshment
     {
         static void Main(string[] args)
         {
-            var numbers = new List<int>() { 1, 2, 3, 4 };
-            numbers.Add(1);
-            numbers.AddRange(new int[3] { 5, 6, 7 });
-            foreach (var number in numbers)
+            var enteredNames = new List<string>();
+            while (true)
             {
-                Console.WriteLine(number);
+                Console.WriteLine("Enter a name of a person who liked you post and press Enter key:");
+                var enteredName = Console.ReadLine();
+                if (enteredName.Length > 0)
+                    enteredNames.Add(enteredName);
+                else
+                    break;
             }
 
-            Console.WriteLine("\nIndex of 1: " + numbers.IndexOf(1));
-            Console.WriteLine("\nLast Index of 1: " + numbers.LastIndexOf(1));
-
-            Console.WriteLine("Count: " + numbers.Count);
-
-            //numbers.Remove(1);
-            //foreach (var item in numbers)
-            //{
-            //    Console.WriteLine(item);
-            //}
-            for (int i = 0; i < numbers.Count; i++)
-            {
-                if (numbers[i] == 1)
-                    numbers.Remove(numbers[i]);
-            }
-
-            foreach (var item in numbers)
-            {
-                Console.WriteLine(item);
-            }
-
-            numbers.Clear();
-
-            Console.WriteLine("Count after clear:" + numbers.Count);
+            if (enteredNames.Count == 0)
+                Console.WriteLine("No One Likes you post");
+            else if (enteredNames.Count == 1)
+                Console.WriteLine(enteredNames[0] + " likes you post");
+            else if (enteredNames.Count == 2)
+                Console.WriteLine(enteredNames[0] + " and " + enteredNames[1] + " likes you post");
+            else
+                Console.WriteLine(enteredNames[0] + ", " + enteredNames[1] + " and " 
+                    + (enteredNames.Count - 2) + " others like you post");
         }
     }
 }
