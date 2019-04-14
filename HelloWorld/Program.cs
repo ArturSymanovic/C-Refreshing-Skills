@@ -7,16 +7,15 @@ namespace CSharpRefreshment
     {
         static void Main(string[] args)
         {
-            var random = new Random();
-            const int PasswordLength = 10;
-            char[] buffer = new char[PasswordLength];
-
-            for (int i = 0; i < PasswordLength; i++)
+            Console.WriteLine("Please enter a serie of numbers separated by comma and press enter:");
+            string enteredText = Console.ReadLine();
+            var arrayOfNumbers = enteredText.Split(',');
+            var maxNumber = Convert.ToInt32(arrayOfNumbers[0]);
+            foreach (var item in arrayOfNumbers)
             {
-                buffer[i] = (char)('a' + random.Next(0, 26));
+                maxNumber = (maxNumber < Convert.ToInt32(item)) ? Convert.ToInt32(item) : maxNumber;
             }
-            var password = new string(buffer);
-            Console.WriteLine(password);
+            Console.WriteLine(maxNumber);
         }
     }
 }
