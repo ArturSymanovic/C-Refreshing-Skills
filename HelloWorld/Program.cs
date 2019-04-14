@@ -7,46 +7,46 @@ namespace CSharpRefreshment
     {
         static void Main(string[] args)
         {
-            int hour = 10;
-            if (hour > 0 && hour < 12)
-            {
-                Console.WriteLine("It's morning");
-            }
-            else if (hour >= 12 && hour < 18)
-            {
-                Console.WriteLine("It's afternoon"); 
-}
-            else
-            {
-                Console.WriteLine("It's evening");
-            }
+            //NumberValidation();
+            MaximumofTwoNumbers();
+            Console.WriteLine("\nEnd of program!");
+        }
 
-            bool isGoldCustomer = false;
-            //float price;
-            //if (isGoldCustomer)
-            //    price = 19.95f;
-            //else
-            //    price = 29.95f;
-            float price = (isGoldCustomer) ? 19.95f : 29.95f;
-            Console.WriteLine(price);
-
-            var season = Season.Autumn;
-            switch(season)
+        private static void MaximumofTwoNumbers()
+        {
+            Console.WriteLine("Number Comparison Program");
+            do
             {
-                //case Season.Autumn:
-                //    Console.WriteLine("It's autumn and a beutiful season.");
-                //    break;
-                //case Season.Summer:
-                //    Console.WriteLine("It's perfect to go to the beach.");
-                //    break;
-                case Season.Autumn:
-                case Season.Summer:
-                    Console.WriteLine("We have got a prtomotion.");
-                    break;
-                default:
-                    Console.WriteLine("I don't understand that season");
-                    break;
-            }
+                Console.WriteLine("\nPlease enter first integer number and press enter:");
+                var isValid1 = Int32.TryParse(Console.ReadLine(), out int parsedValue1);
+                Console.WriteLine("\nPlease enter second integer number and press enter:");
+                var isValid2 = Int32.TryParse(Console.ReadLine(), out int parsedValue2);
+                if (isValid1 && isValid2 && parsedValue1 > parsedValue2)
+                {
+                    Console.WriteLine(String.Format("The maximum of the two numbers: {0}", parsedValue1));
+                }
+                else if (isValid1 && isValid2 && parsedValue1 < parsedValue2)
+                {
+                    Console.WriteLine(String.Format("The maximum of the two numbers: {0}", parsedValue2));
+                }
+                else
+                {
+                    Console.WriteLine("One or both of the entered numbers are not valid integers");
+                }
+                Console.WriteLine("Try again?");
+            } while (Console.ReadKey().KeyChar.ToString().ToLower() == "y");
+        }
+
+        private static void NumberValidation()
+        {
+            Console.WriteLine("Numbers between 1-10 validation program");
+            do
+            {
+                Console.WriteLine("\nPlease enter an integer in a range from 1 to 10 and press enter:");
+                Int32.TryParse(Console.ReadLine(), out int parsedValue);
+                Console.WriteLine((parsedValue > 0 && parsedValue < 11) ? "Valid" : "Invalid");
+                Console.WriteLine("Try again?");
+            } while (Console.ReadKey().KeyChar.ToString().ToLower() == "y");
         }
     }
 }
