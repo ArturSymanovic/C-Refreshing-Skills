@@ -7,25 +7,21 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            var numbers = new int[3];
-            numbers[0] = 1;
-            Console.WriteLine(numbers[0]);
-            Console.WriteLine(numbers[1]);
-            Console.WriteLine(numbers[2]);
-
-
-            var flags = new bool[3];
-            flags[0] = true;
-
-            Console.WriteLine(flags[0]);
-            Console.WriteLine(flags[1]);
-            Console.WriteLine(flags[2]);
-
-            string[] names = new string[3] { "Jack", "John", "Marry" };
-
-            Console.WriteLine(names[0]);
-            Console.WriteLine(names[1]);
-            Console.WriteLine(names[2]);
+            string firstName = "Artur";
+            string lastName = "Symanovic";
+            var fullName = firstName + " " + lastName;
+            var myFullName = string.Format("My name is {0} {1}", firstName, lastName);
+            var names = new string[3] { "John", "Jack", "Marry" };
+            var formattedNames = string.Join(", ", names);
+            Console.WriteLine(formattedNames);
+            var text = "Hi John\nLook into the following paths\nc:\\folder2\nc:\\folder3\nc:\\folder4";
+            var text1 = @"Hi John
+Look into the following paths
+c:\folder2
+c:\folder3
+c:\folder4";
+            Console.WriteLine(text);
+            Console.WriteLine(text1);
         }
     }
 }
