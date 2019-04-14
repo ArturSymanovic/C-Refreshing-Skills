@@ -8,45 +8,33 @@ namespace CSharpRefreshment
     {
         static void Main(string[] args)
         {
-            DateTime dateTime = new DateTime(2019, 1, 1);
-            var now = DateTime.Now;
-            var today = DateTime.Today;
+            var fullName = "Artur Symanovic ";
+            Console.WriteLine("Trim: {0}", fullName.Trim());
+            Console.WriteLine("ToUpper: {0}", fullName.Trim().ToUpper());
 
-            //Console.WriteLine("Hour: " + now.Hour);
+            var index = fullName.IndexOf(' ');
+            var firstName = fullName.Substring(0, index);
+            var lastName = fullName.Substring(index + 1);
+            Console.WriteLine("First Name: {0}", firstName);
+            Console.WriteLine("Last Name: {0}", lastName);
 
-            var tomorrow = now.AddDays(1);
-            var yesterday = now.AddDays(-1);
-            
-            Console.WriteLine(now.ToLongDateString());
-            Console.WriteLine(now.ToShortDateString());
-            Console.WriteLine(now.ToShortTimeString());
-            Console.WriteLine(now.ToLongTimeString());
-            Console.WriteLine(now.ToString("yyyy-MM-dd hh:mm"));
-            //c# format specifiers online for mor info
+            var names = fullName.Split(' ');
+            Console.WriteLine("First Name {0}", names[0]);
+            Console.WriteLine("Last Name {0}", names[1]);
 
+            Console.WriteLine(fullName.Replace("Artur", "Arturaa"));
 
-            //Creating Time Span
-            var timeSpan = new TimeSpan(1, 2, 3);
-            var timeSpan1 = new TimeSpan(1, 0, 0);
-            var timeSpan2 = TimeSpan.FromHours(1);
-            var start = DateTime.Now;
-            var end = DateTime.Now.AddMinutes(2);
-            var duration = end - start;
-            Console.WriteLine("Duration: " + duration);
+            if (String.IsNullOrWhiteSpace(" "))
+                Console.WriteLine("Invalid");
 
-            //Properties
-            Console.WriteLine("Minutes: " + timeSpan.Minutes);
-            Console.WriteLine("Total Minutes: " + timeSpan.TotalMinutes);
+            var str = "25";
+            var age = Convert.ToInt32(str);
+            Console.WriteLine(age);
 
-            // Add 
-            Console.WriteLine("Add Example: " + timeSpan.Add(TimeSpan.FromMinutes(8)));
-            Console.WriteLine("Subtract Example: " + timeSpan.Subtract(TimeSpan.FromMinutes(2)));
+            float price = 29.95f;
+            Console.WriteLine(price.ToString("C"));
+            Console.WriteLine(price.ToString("C0"));
 
-            //ToString
-            Console.WriteLine("TosString: " + timeSpan.ToString());
-
-            //Parse
-            Console.WriteLine("Parse: " + TimeSpan.Parse("01:02:03"));
         }
     }
 }
