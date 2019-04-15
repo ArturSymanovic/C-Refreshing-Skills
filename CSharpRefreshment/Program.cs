@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using HelloWorld.Math;
+using System.IO;
 
 namespace CSharpRefreshment
 {
@@ -9,31 +10,43 @@ namespace CSharpRefreshment
     {
         static void Main(string[] args)
         {
-            var builder = new StringBuilder();
-            //builder.Append('-', 10);
-            //builder.AppendLine();
-            //builder.Append("Header");
-            //builder.AppendLine();
-            //builder.Append('-', 10);
-            //builder.Replace('-', '+');
-            //builder.Remove(0, 10);
-            //builder.Insert(0, new string('-', 10));
+            var path = @"c:\somefile.jpg";
+            File.Copy(@"c:\temp\myfile.jpg", @"d:\temp\myfile.jpg", true);
+            File.Delete(path);
+            if (File.Exists(path))
+            {
+                //
+            }
+            var content = File.ReadAllText(path);
 
-            builder
-                .Append('-', 10)
-                .AppendLine()
-                .Append("Header")
-                .AppendLine()
-                .Append('-', 10)
-                .Replace('-', '+')
-                .Remove(0, 10)
-                .Insert(0, new string('-', 10));
+            var fileInfo = new FileInfo(path);
+            fileInfo.CopyTo("...");
+            fileInfo.Delete();
+            if (fileInfo.Exists)
+            {
+                //
+            }
+            FileStream fStream1 = fileInfo.OpenRead();
 
-            Console.WriteLine("First Char: " + builder[0]);
-            Console.WriteLine(builder);
+            Directory.CreateDirectory(@"c:\temp\folder1");
+            var files = Directory.GetFiles(@"c:\projects\charpfundamentals", "*.*", SearchOption.AllDirectories);
+            foreach (var item in files)
+            {
+                Console.WriteLine(item);
+            }
+
+            var directories = Directory.GetDirectories(@"c:\projects", "*,*", SearchOption.AllDirectories);
+            foreach (var item in directories)
+            {
+                Console.WriteLine(item);
+            }
+
+            Directory.Exists("...");
+            var directoryInfo = new DirectoryInfo("...");
+            directoryInfo.GetFiles();
+
+
 
         }
-
-        
     }
 }
