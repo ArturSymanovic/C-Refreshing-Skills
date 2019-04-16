@@ -6,14 +6,21 @@ using System.Threading.Tasks;
 
 namespace CSharpRefreshment
 {
-    class Person
+    public class Person
     {
         public string FirstName;
         public string LastName;
         public int Age;
-        public void Introduce()
+        public void Introduce(string to)
         {
-            Console.WriteLine("My name is " + FirstName + " " + LastName);
+            Console.WriteLine("Hi {0}, my name is {1} {2}", to, FirstName, LastName);
+        }
+
+        public static Person Parse(string str)
+        {
+            var person = new Person();
+            person.FirstName = str;
+            return person;
         }
     }
 }
