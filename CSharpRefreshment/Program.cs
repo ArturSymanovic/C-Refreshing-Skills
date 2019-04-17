@@ -10,11 +10,10 @@ namespace CSharpRefreshment
     {
         static void Main(string[] args)
         {
-            var customer = new Customer(1);
-            customer.Orders.Add(new Order());
-            customer.Orders.Add(new Order());
-
-            Console.WriteLine(customer.Orders.Count);
+            var person = new Person();
+            person.SetBirthdate(new DateTime(1987, 5, 8));
+            
+            Console.WriteLine(person.GetBirthdate());
         }
     }
 }

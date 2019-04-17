@@ -8,6 +8,8 @@ namespace CSharpRefreshment
 {
     public class Person
     {
+        private DateTime _birthdate;
+
         public string FirstName;
         public string LastName;
         public int Age;
@@ -21,6 +23,16 @@ namespace CSharpRefreshment
             var person = new Person();
             person.FirstName = str;
             return person;
+        }
+
+        public void SetBirthdate(DateTime birthdate)
+        {
+            _birthdate = birthdate;
+        }
+
+        public DateTime GetBirthdate()
+        {
+            return _birthdate;
         }
     }
 }
