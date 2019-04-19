@@ -10,10 +10,9 @@ namespace CSharpRefreshment
     {
         public int Width { get; set; }
         public int Height { get; set; }
-        public int X { get; set; }
-        public int Y { get; set; }
+        public Position Position { get; set; }
 
-        public void Draw()
+        public virtual void Draw()
         {
 
         }

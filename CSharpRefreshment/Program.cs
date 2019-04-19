@@ -13,21 +13,13 @@ namespace CSharpRefreshment
     {
         static void Main(string[] args)
         {
-            var stack = new Stack();
-            stack.Push(1);
-            stack.Push(2);
-            stack.Push(3);
-            
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
+            var shapes = new List<Shape>();
+            shapes.Add(new Circle());
+            shapes.Add(new Rectangle());
+            shapes.Add(new Triangle());
 
-            stack.Clear();
-            stack.Push(3);
-            stack.Push(2);
-            
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
+            var canvas = new Canvas();
+            canvas.DrawShapes(shapes);
         }
 
     }
