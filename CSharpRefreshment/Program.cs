@@ -11,15 +11,9 @@ namespace CSharpRefreshment
     {
         static void Main(string[] args)
         {
-            var stopWatch = new Stopwatch();
-            stopWatch.Start();
-            Thread.Sleep(1500);
-            stopWatch.Stop();
-            Console.WriteLine(stopWatch.GetDuration());
-            stopWatch.Start();
-            Thread.Sleep(2000);
-            stopWatch.Stop();
-            Console.WriteLine(stopWatch.GetDuration());
+            var text = new Text();
+            text.Width = 100;
+            text.Copy();
         }
     }
 }
