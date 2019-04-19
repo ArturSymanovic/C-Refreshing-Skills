@@ -13,14 +13,14 @@ namespace CSharpRefreshment
     {
         static void Main(string[] args)
         {
-            //Illegal for abstract classes
-            //var shape = new Shape();
+            var sqlConnection = new SqlConnection("abc");
+            sqlConnection.Open();
 
-            var circle = new Circle();
-            circle.Draw();
+            var oracleConnection = new OracleConnection("def");
+            oracleConnection.Open();
 
-            var rectangle = new Rectangle();
-            rectangle.Draw();
+            sqlConnection.Close();
+            oracleConnection.Close();
         }
 
     }

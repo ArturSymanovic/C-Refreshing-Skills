@@ -47,11 +47,13 @@
     <Compile Include="Canvas.cs" />
     <Compile Include="Car.cs" />
     <Compile Include="Circle.cs" />
+    <Compile Include="DbConnection.cs" />
     <Compile Include="DbMigrator.cs" />
     <Compile Include="HttpCookie.cs" />
     <Compile Include="Installer.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Math\Calculator.cs" />
+    <Compile Include="OracleConnection.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Point.cs" />
@@ -64,6 +66,7 @@
     <Compile Include="Season.cs" />
     <Compile Include="Shape.cs" />
     <Compile Include="ShippingMethod.cs" />
+    <Compile Include="SqlConnection.cs" />
     <Compile Include="Stack.cs" />
     <Compile Include="Stopwatch.cs" />
     <Compile Include="StringUtility.cs" />
