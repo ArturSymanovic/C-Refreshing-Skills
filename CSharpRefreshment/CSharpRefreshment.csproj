@@ -60,6 +60,7 @@
     <Compile Include="Season.cs" />
     <Compile Include="Shape.cs" />
     <Compile Include="ShippingMethod.cs" />
+    <Compile Include="Stack.cs" />
     <Compile Include="Stopwatch.cs" />
     <Compile Include="StringUtility.cs" />
     <Compile Include="Text.cs" />

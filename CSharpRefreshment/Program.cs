@@ -13,16 +13,21 @@ namespace CSharpRefreshment
     {
         static void Main(string[] args)
         {
-            //var list = new ArrayList();
+            var stack = new Stack();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
 
-            //list.Add(1);
-            //list.Add("Artur");
-            //list.Add(DateTime.Today);
-
-            //Error
-            //var number = (int)list[1];
-
-            //Boxing and unboxing has performance penalty
+            stack.Clear();
+            stack.Push(3);
+            stack.Push(2);
+            
+            Console.WriteLine(stack.Pop());
+            Console.WriteLine(stack.Pop());
         }
 
     }
