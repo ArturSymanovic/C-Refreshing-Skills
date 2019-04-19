@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpRefreshment", "CSharp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon", "Amazon\Amazon.csproj", "{1181951B-6047-49DC-98D0-79AF3DC31F7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpRefreshment.UnitTests", "CSharpRefreshment.UnitTests\CSharpRefreshment.UnitTests.csproj", "{E92DB985-E941-476A-A09D-4B5FE910A2DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1181951B-6047-49DC-98D0-79AF3DC31F7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1181951B-6047-49DC-98D0-79AF3DC31F7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1181951B-6047-49DC-98D0-79AF3DC31F7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E92DB985-E941-476A-A09D-4B5FE910A2DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E92DB985-E941-476A-A09D-4B5FE910A2DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E92DB985-E941-476A-A09D-4B5FE910A2DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E92DB985-E941-476A-A09D-4B5FE910A2DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

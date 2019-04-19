@@ -13,14 +13,9 @@ namespace CSharpRefreshment
     {
         static void Main(string[] args)
         {
-            var sqlConnection = new SqlConnection("abc");
-            sqlConnection.Open();
-
-            var oracleConnection = new OracleConnection("def");
-            oracleConnection.Open();
-
-            sqlConnection.Close();
-            oracleConnection.Close();
+            var orderProcessor = new OrderProcessor(new ShippingCalculator());
+            var order = new Order { DatePlaced = DateTime.Now, TotalPrice = 100f };
+            orderProcessor.Process(order);
         }
 
     }
