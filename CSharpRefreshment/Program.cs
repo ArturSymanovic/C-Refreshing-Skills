@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using CSharpRefreshment.Math;
 using System.IO;
+using System.Threading;
 
 namespace CSharpRefreshment
 {
@@ -10,9 +11,15 @@ namespace CSharpRefreshment
     {
         static void Main(string[] args)
         {
-            var cookie = new HttpCookie();
-            cookie["name"] = "Artur";
-            Console.WriteLine(cookie["name"]);
+            var stopWatch = new Stopwatch();
+            stopWatch.Start();
+            Thread.Sleep(1500);
+            stopWatch.Stop();
+            Console.WriteLine(stopWatch.GetDuration());
+            stopWatch.Start();
+            Thread.Sleep(2000);
+            stopWatch.Stop();
+            Console.WriteLine(stopWatch.GetDuration());
         }
     }
 }
