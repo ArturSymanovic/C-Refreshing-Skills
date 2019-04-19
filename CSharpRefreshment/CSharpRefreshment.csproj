@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculator.cs" />
+    <Compile Include="Car.cs" />
     <Compile Include="DbMigrator.cs" />
     <Compile Include="HttpCookie.cs" />
     <Compile Include="Installer.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Stopwatch.cs" />
     <Compile Include="StringUtility.cs" />
     <Compile Include="Text.cs" />
+    <Compile Include="Vehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
