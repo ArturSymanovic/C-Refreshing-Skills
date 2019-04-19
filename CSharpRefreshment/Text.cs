@@ -6,15 +6,10 @@ using System.Threading.Tasks;
 
 namespace CSharpRefreshment
 {
-    class Text : PresentationObject
+    class Text : Shape
     {
         public int FontSize { get; set; }
         public string FontName { get; set; }
-
-        public void AddHyperlink(string url)
-        {
-            Console.WriteLine("We added a link to " + url);
-        }
 
     }
 }
