@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HelloWorld.Math
+namespace CSharpRefreshment.Math
 {
     public class Calculator
     {
