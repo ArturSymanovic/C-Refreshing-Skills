@@ -13,30 +13,16 @@ namespace CSharpRefreshment
     {
         static void Main(string[] args)
         {
-            //Upcasting
-
-            //Text text = new Text();
-            //Shape shape = text;
-
-            //text.Width = 200;
-            //shape.Width = 100;
-
-            //Console.WriteLine(text.Width);
-
-            //StreamReader reader = new StreamReader(new MemoryStream());
             //var list = new ArrayList();
+
             //list.Add(1);
             //list.Add("Artur");
-            //list.Add(new Text());
+            //list.Add(DateTime.Today);
 
-            //var anotherList = new List<Shape>();
-            //------------------------------------------------
+            //Error
+            //var number = (int)list[1];
 
-
-            //Downcasting
-
-            Shape shape = new Text();
-
+            //Boxing and unboxing has performance penalty
         }
 
     }
