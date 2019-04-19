@@ -11,14 +11,12 @@ namespace CSharpRefreshment
     {
         static void Main(string[] args)
         {
-            var dbMigrator = new DbMigrator(new Logger());
-
-            var logger = new Logger();
-            var installer = new Installer(logger);
-
-
-            dbMigrator.Migrate();
-            installer.Install();
+            Post post = new Post("a", "b");
+            post.UpVote();
+            post.UpVote();
+            post.DownVote();
+            Console.WriteLine("Post Title: {0}\nPost Description: {1}\nPost Created On: {2}\nPost Rating: {3}",
+                post.Title, post.Description,post.CreatedOn,post.Votes);
         }
     }
 }
