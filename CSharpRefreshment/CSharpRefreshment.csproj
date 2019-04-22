@@ -46,6 +46,7 @@
     <Compile Include="Calculator.cs" />
     <Compile Include="Canvas.cs" />
     <Compile Include="Car.cs" />
+    <Compile Include="ChangingStatusOfAVideo.cs" />
     <Compile Include="Circle.cs" />
     <Compile Include="ConsoleLogger.cs" />
     <Compile Include="DbConnection.cs" />
@@ -55,12 +56,15 @@
     <Compile Include="INotificationChannel.cs" />
     <Compile Include="Installer.cs" />
     <Compile Include="ILogger.cs" />
+    <Compile Include="IActivity.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Mail.cs" />
     <Compile Include="MailNotificationChannel.cs" />
     <Compile Include="MailService.cs" />
     <Compile Include="Math\Calculator.cs" />
     <Compile Include="Message.cs" />
+    <Compile Include="NotifyingOwner.cs" />
+    <Compile Include="NotifyingWebService.cs" />
     <Compile Include="OracleConnection.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderProcessor.cs" />
@@ -84,9 +88,12 @@
     <Compile Include="StringUtility.cs" />
     <Compile Include="Text.cs" />
     <Compile Include="Triangle.cs" />
+    <Compile Include="UploadingVideo.cs" />
     <Compile Include="Vehicle.cs" />
     <Compile Include="Video.cs" />
     <Compile Include="VideoEncoder.cs" />
+    <Compile Include="Workflow.cs" />
+    <Compile Include="WorkflowEngine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

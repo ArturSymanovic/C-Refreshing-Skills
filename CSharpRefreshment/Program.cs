@@ -13,10 +13,17 @@ namespace CSharpRefreshment
     {
         static void Main(string[] args)
         {
-            var encoder = new VideoEncoder();
-            encoder.RegisterNotificationChannel(new MailNotificationChannel());
-            encoder.RegisterNotificationChannel(new SmsNotificationChannel());
-            encoder.Encode(new Video());
+            var workflowEngine = new WorkflowEngine();
+            var workflow = new Workflow();
+            var uploadingVideo = new UploadingVideo();
+            var notifyingWebService = new NotifyingWebService();
+            var notifyingOwner = new NotifyingOwner();
+            var changingStatusOfAVideo = new ChangingStatusOfAVideo();
+            workflow.RegisterActivity(uploadingVideo);
+            workflow.RegisterActivity(notifyingWebService);
+            workflow.RegisterActivity(notifyingOwner);
+            workflow.RegisterActivity(changingStatusOfAVideo);
+            workflowEngine.Run(workflow);
         }
 
     }
