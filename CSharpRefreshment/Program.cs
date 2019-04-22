@@ -13,10 +13,10 @@ namespace CSharpRefreshment
     {
         static void Main(string[] args)
         {
-            //var dbMigrator = new DbMigrator(new ConsoleLogger());
-            var dbMigrator = new DbMigrator(new FileLogger("C:\\temp\\log.txt"));
-            dbMigrator.Migrate();
-
+            var encoder = new VideoEncoder();
+            encoder.RegisterNotificationChannel(new MailNotificationChannel());
+            encoder.RegisterNotificationChannel(new SmsNotificationChannel());
+            encoder.Encode(new Video());
         }
 
     }

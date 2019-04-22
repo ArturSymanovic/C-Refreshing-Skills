@@ -52,10 +52,15 @@
     <Compile Include="DbMigrator.cs" />
     <Compile Include="FileLogger.cs" />
     <Compile Include="HttpCookie.cs" />
+    <Compile Include="INotificationChannel.cs" />
     <Compile Include="Installer.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="Logger.cs" />
+    <Compile Include="Mail.cs" />
+    <Compile Include="MailNotificationChannel.cs" />
+    <Compile Include="MailService.cs" />
     <Compile Include="Math\Calculator.cs" />
+    <Compile Include="Message.cs" />
     <Compile Include="OracleConnection.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderProcessor.cs" />
@@ -72,6 +77,7 @@
     <Compile Include="Shipment.cs" />
     <Compile Include="ShippingCalculator.cs" />
     <Compile Include="ShippingMethod.cs" />
+    <Compile Include="SmsNotificationChannel.cs" />
     <Compile Include="SqlConnection.cs" />
     <Compile Include="Stack.cs" />
     <Compile Include="Stopwatch.cs" />
@@ -79,6 +85,8 @@
     <Compile Include="Text.cs" />
     <Compile Include="Triangle.cs" />
     <Compile Include="Vehicle.cs" />
+    <Compile Include="Video.cs" />
+    <Compile Include="VideoEncoder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
