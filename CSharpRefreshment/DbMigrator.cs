@@ -6,17 +6,21 @@ using System.Threading.Tasks;
 
 namespace CSharpRefreshment
 {
+
     public class DbMigrator
     {
-        private readonly Logger _logger;
-        public DbMigrator(Logger logger)
+        private readonly ILogger _logger;
+        public DbMigrator(ILogger logger)
         {
             _logger = logger;
         }
-
         public void Migrate()
         {
-            _logger.Log("We are migrating blah blah blah");
+            _logger.LogInfo("Migration Started On: " + DateTime.Now);
+
+            //Details of migration
+
+            _logger.LogInfo("Migration Completed On: " + DateTime.Now);
         }
     }
 }
